@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search my Playlists</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+<script src="phonegap.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>   
+      <link rel="stylesheet" type="text/css" href="search.css">
+      <script type="text/javascript" src="auth.js"></script>
+      <script src="search.js"></script>   
+       
+<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+
+
+    
+  </head>
+  <body>
+  <div data-role="page" id="main" data-title="playlist">
+  <div data-role="header"  data-position="inline">
+  <h1>My Favorite Videos</h1>
+  <a href="#" id="login-link" data-icon="user" class="ui-btn-right">Login</a>
+  </div>
+
+   
+  <div data-role="main" class="ui-content">
+   
+
+   
+      <div class="ui-field-contain">
+        <label for="search"></label>
+        <input type="search" name="search" id="search" data-iconpos="left" value="child" data-mini="true" >
+        
+      </div>
+      
+      
+        
+   
+	<div id="video-container" class="content2">
+
+        
+
+	</div>
+	
+
+  </div>
+</div>
+
+</body>
+</html>
