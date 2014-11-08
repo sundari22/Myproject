@@ -11,4 +11,6 @@ my first app
 <author href="http://users.metropolia.fi/~sivagama" email="sundari.arulmani@gmail.com">
 Sundari
 </author>
+<gap:plugin name="org.apache.cordova.inappbrowser" />
+<access origin="*" />
 </widget>
