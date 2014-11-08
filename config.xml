@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
-xmlns:gap = "http://phonegap.com/ns/1.0"
-id = ”fi.metropolia.kari"
-versionCode=”2"
-version = ”2.0.0">
+xmlns:gap     = "http://phonegap.com/ns/1.0"
+id            = "fi.metroppolia.sundarimyproject"
+versionCode   = "1"
+version       = "1.0.0">
 <name>lab1</name>
 <description>
 my first app
 </description>
-<author href="http://users.metropolia.fi/~sivagama" email=”sundari.arulmani@gmail.com">
-Kari
+<author href="http://users.metropolia.fi/~sivagama" email="sundari.arulmani@gmail.com">
+Sundari
 </author>
 </widget>
