@@ -1,8 +1,4 @@
-googleApiClientReady = function() {
-  gapi.auth.init(function() {
-    window.setTimeout(checkAuth, 1);
-  });
-}
+
 var googleapi = {
     authorize: function(options) {
         var deferred = $.Deferred();
@@ -62,9 +58,11 @@ var googleapi = {
     }
 };
 
-$(document).on('deviceready', function() {
-    //var $loginButton = $('#login a');
-    // $loginStatus = $('#login p');
+googleApiClientReady = function() {
+  gapi.auth.init(function() {
+    window.setTimeout(checkAuth, 1);
+  });
+}
     $('#login-link').click(function() {
     
         googleapi.authorize({
@@ -86,5 +84,3 @@ $(document).on('deviceready', function() {
     handleAPILoaded();
   });
 }
-    
-});
