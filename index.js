@@ -1,3 +1,8 @@
+googleApiClientReady = function() {
+  gapi.auth.init(function() {
+    window.setTimeout(checkAuth, 1);
+  });
+}
 var googleapi = {
     authorize: function(options) {
         var deferred = $.Deferred();
@@ -58,19 +63,28 @@ var googleapi = {
 };
 
 $(document).on('deviceready', function() {
-    var $loginButton = $('#login a');
-    var $loginStatus = $('#login p');
-
-    $loginButton.on('click', function() {
+    //var $loginButton = $('#login a');
+    // $loginStatus = $('#login p');
+    $('#login-link').click(function() {
+    
         googleapi.authorize({
             client_id: '1030024881954-nto730v1nmhjdouscr90ipnj2dghl4bt.apps.googleusercontent.com',
             client_secret: 'iedaZ21p_3vExrcUEGSHX-74',
             redirect_uri: 'http://localhost',
             scope: 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/youtube'
         }).done(function(data) {
-            $loginStatus.html('Access Token: ' + data.access_token);
+            $('#login-link').hide();
+            loadAPIClientInterfaces();
         }).fail(function(data) {
-            $loginStatus.html(data.error);
+            $('#login-link').show();
         });
     });
+    function loadAPIClientInterfaces() {
+  
+  gapi.client.load('youtube', 'v3', function() {
+    
+    handleAPILoaded();
+  });
+}
+    
 });
