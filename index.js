@@ -12,7 +12,7 @@ function oauth2_login() {
         logout_url: 'https://accounts.google.com/logout',         // recommended if available
         client_id: '1030024881954-nto730v1nmhjdouscr90ipnj2dghl4bt.apps.googleusercontent.com',          // required
         client_secret: 'iedaZ21p_3vExrcUEGSHX-74',      // required if response_type = 'code'
-        redirect_uri: 'http:/localhost/FINAL/TRIAL',       // required - some dummy url
+        redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',       // required - some dummy url
         other_params: {scope:'https://www.googleapis.com/auth/userinfo.profile'}// optional params object for scope, state, display...
         }, function(token, response){
         // do something with token or response
