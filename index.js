@@ -16,15 +16,23 @@ function oauth2_login() {
         other_params: {scope:'https://www.googleapis.com/auth/userinfo.profile'}// optional params object for scope, state, display...
         }, function(token, response){
         // do something with token or response
-        $("#logs").append("<p class='success'><b>access_token: </b>"+token+"</p>");
-        $("#logs").append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>");
+        //$("#logs").append("<p class='success'><b>access_token: </b>"+token+"</p>");
+        //$("#logs").append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>");
+        ('#login-link').append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>")
         }, function(error, response){
         // do something with error object
-        $("#logs").append("<p class='error'><b>error: </b>"+JSON.stringify(error)+"</p>");
-        $("#logs").append("<p class='error'><b>response: </b>"+JSON.stringify(response)+"</p>");
-    
+        //$("#logs").append("<p class='error'><b>error: </b>"+JSON.stringify(error)+"</p>");
+        //$("#logs").append("<p class='error'><b>response: </b>"+JSON.stringify(response)+"</p>");
+        ('#login-link').append("<p class='error'><b>response: </b>"+JSON.stringify(response)+"</p>")
         }); 
         }
+
+googleApiClientReady = function() {
+ $('#login-link').click(function() {
+    
+        oauth2_login(); 
+});
+}
 var googleapi = {
     authorize: function(options) {
         var deferred = $.Deferred();
@@ -84,39 +92,9 @@ var googleapi = {
     }
 };
 
-googleApiClientReady = function() {
-  gapi.auth.init(function() {
-    window.setTimeout(checkAuth, 1);
-  });
-}
-function checkAuth() {
-  gapi.auth.authorize({
-    client_id: OAUTH2_CLIENT_ID,
-    scope: OAUTH2_SCOPES,
-    immediate: true
-  }, handleAuthResult);
-}
-// Handle the result of a gapi.auth.authorize() call.
-function handleAuthResult(authResult) {
-if (authResult && !authResult.error) {
-// Authorization was successful. Hide authorization prompts and show
-// content that should be visible after authorization succeeds.
-    //$('#login-link').hide();
-    //getEmail();
-    //makeApiCall();
-  
-  alert("Hello2");
-  $('#login-link').hide();
+
   loadAPIClientInterfaces();
-  } 
-else {
   
-    $('#login-link').click(function() {
-    
-        oauth2_login();
-    });
-}
-}
     function loadAPIClientInterfaces() {
   
   gapi.client.load('youtube', 'v3', function() {
