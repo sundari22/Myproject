@@ -116,6 +116,7 @@ else {
         oauth2_login();
     });
 }
+}
     function loadAPIClientInterfaces() {
   
   gapi.client.load('youtube', 'v3', function() {
