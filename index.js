@@ -113,7 +113,7 @@ else {
   
     $('#login-link').click(function() {
     
-        oauth2_login()
+        oauth2_login();
     });
 }
     function loadAPIClientInterfaces() {
