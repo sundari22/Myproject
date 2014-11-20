@@ -13,7 +13,7 @@ function oauth2_login() {
         client_id: '1030024881954-nto730v1nmhjdouscr90ipnj2dghl4bt.apps.googleusercontent.com',          // required
         client_secret: 'iedaZ21p_3vExrcUEGSHX-74',      // required if response_type = 'code'
         redirect_uri: 'http://localhost/TRIAL1/oauth2callback',       // required - some dummy url
-        other_params: {scope:'https://www.googleapis.com/auth/userinfo.profile'}// optional params object for scope, state, display...
+        other_params: {scope:'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/youtube'}// optional params object for scope, state, display...
         }, function(token, response){
         // do something with token or response
         //$("#logs").append("<p class='success'><b>access_token: </b>"+token+"</p>");
