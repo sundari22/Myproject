@@ -39,7 +39,7 @@ function requestUserUploadsPlaylistId() {
  
   request.execute(function(response) {
     
-    
+    console.log(response);
     for (i in response.result.items){
     
     var re =new RegExp(q, "gi")
