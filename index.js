@@ -3,8 +3,7 @@ var OAUTH2_CLIENT_ID = '1030024881954-nto730v1nmhjdouscr90ipnj2dghl4bt.apps.goog
 var OAUTH2_SCOPES = [
   'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/youtube'
 ];
-var q, playlistId, k, nextPageToken, prevPageToken;
-var videoarray = [];
+
 
 function oauth2_login() {
         $.oauth2({
@@ -32,6 +31,8 @@ function oauth2_login() {
         }
 
 googleApiClientReady = function() {
+var q, playlistId, k, nextPageToken, prevPageToken;
+var videoarray = [];
  $('#login-link').click(function() {
     
         oauth2_login(); 
