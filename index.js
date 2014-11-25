@@ -18,13 +18,13 @@ function oauth2_login() {
         // do something with token or response
         //$("#logs").append("<p class='success'><b>access_token: </b>"+token+"</p>");
         //$("#logs").append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>");
-        ('#login-link').hide();
+        $('#login-link').hide();
         loadAPIClientInterfaces();
         }, function(error, response){
         // do something with error object
         //$("#logs").append("<p class='error'><b>error: </b>"+JSON.stringify(error)+"</p>");
         //$("#logs").append("<p class='error'><b>response: </b>"+JSON.stringify(response)+"</p>");
-        ('#login-link').append("<p class='error'><b>response: </b>"+JSON.stringify(response)+"</p>")
+        $('#login-link').append("<p class='error'><b>response: </b>"+JSON.stringify(response)+"</p>")
         }); 
         }
 
