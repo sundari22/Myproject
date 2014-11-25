@@ -17,7 +17,7 @@ $(document).on('pageinit',function() {
 		
   
   q = $('#search').val();
-    
+  console.log(q);  
   requestUserUploadsPlaylistId();
  
 });
