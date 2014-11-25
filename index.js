@@ -19,7 +19,8 @@ function oauth2_login() {
         //$("#logs").append("<p class='success'><b>access_token: </b>"+token+"</p>");
         //$("#logs").append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>");
         $('#login-link').hide();
-        loadAPIClientInterfaces();
+        $('#login-link').append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>");
+        loadAPIClientInterfaces(response);
         }, function(error, response){
         // do something with error object
         //$("#logs").append("<p class='error'><b>error: </b>"+JSON.stringify(error)+"</p>");
@@ -38,8 +39,8 @@ googleApiClientReady = function() {
 
   
   
-    function loadAPIClientInterfaces() {
-  
+    function loadAPIClientInterfaces(response) {
+  console.log(response);
   gapi.client.load('youtube', 'v3', function() {
     
     handleAPILoaded();
