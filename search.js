@@ -8,7 +8,7 @@ function onYouTubeApiLoad() {
 	console.log("x");
    // This API key is intended for use only in this lesson. 
    // See http://goo.gl/PdPA1 to get a key for your own applications.
-   gapi.client.setApiKey('iedaZ21p_3vExrcUEGSHX-74'); 
+   gapi.client.setApiKey('AIzaSyCUop_qKqfZHRTy09LGfpSt8cNcHsrmvIY'); 
 
 
 }
