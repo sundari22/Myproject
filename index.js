@@ -4,6 +4,22 @@ var OAUTH2_SCOPES = [
   'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/youtube'
 ];
 
+function loadAPIClientInterfaces(response) {
+  console.log(response);
+  //gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
+  //gapi.client.load('youtube', 'v3', function() {
+    //handleAPILoaded();
+    var request = gapi.client.youtube.playlists.list({
+    mine: true,
+    part: 'id, snippet, contentDetails'
+  });
+ 
+  request.execute(function(response) {
+    
+    console.log(response);
+  //});
+}
+  } 
 
 function oauth2_login() {
         $.oauth2({
@@ -42,19 +58,4 @@ googleApiClientReady = function() {
 
   
   
-  function loadAPIClientInterfaces(response) {
-  console.log(response);
-  //gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
-  //gapi.client.load('youtube', 'v3', function() {
-    //handleAPILoaded();
-    var request = gapi.client.youtube.playlists.list({
-    mine: true,
-    part: 'id, snippet, contentDetails'
-  });
- 
-  request.execute(function(response) {
-    
-    console.log(response);
-  //});
-}
-  } 
+  
