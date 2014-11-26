@@ -3,6 +3,7 @@
 function handleAPILoaded() {
 	x=child;
 	console.log(x)
+	gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
   $('#search-button').attr('disabled', false);
 }
 
