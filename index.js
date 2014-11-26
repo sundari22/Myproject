@@ -46,7 +46,15 @@ googleApiClientReady = function() {
   console.log(response);
   //gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
   //gapi.client.load('youtube', 'v3', function() {
-    handleAPILoaded();
+    //handleAPILoaded();
+    var request = gapi.client.youtube.playlists.list({
+    mine: true,
+    part: 'id, snippet, contentDetails'
+  });
+ 
+  request.execute(function(response) {
+    
+    console.log(response);
   //});
 }
-   
+  } 
