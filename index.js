@@ -31,8 +31,7 @@ function oauth2_login() {
         }
 
 googleApiClientReady = function() {
-var q, playlistId, k, nextPageToken, prevPageToken;
-var videoarray = [];
+
  $('#login-link').click(function() {
     
         oauth2_login(); 
@@ -42,9 +41,11 @@ var videoarray = [];
 
   
   
-    function loadAPIClientInterfaces(response) {
+  function loadAPIClientInterfaces(response) {
   console.log(response);
   gapi.client.load('youtube', 'v3', function() {
+    var q, playlistId, k, nextPageToken, prevPageToken;
+var videoarray = [];
     
   // See https://developers.google.com/youtube/v3/docs/channels/list
     var request = gapi.client.youtube.playlists.list({
