@@ -1,8 +1,8 @@
 
 // After the API loads, call a function to enable the search box.
 function handleAPILoaded() {
- // $('#search-button').attr('disabled', false);
-//}
+  $('#search-button').attr('disabled', false);
+}
 
 var q, playlistId, k, nextPageToken, prevPageToken;
 var videoarray = [];
@@ -11,16 +11,16 @@ var videoarray = [];
 // Search for a specified string.
 jQuery.ajaxSetup({async:false});
 
-//$(document).on('pageinit',function() {
+$(document).on('pageinit',function() {
 	
-//	$("#search").click(function(){
+	$("#search").click(function(){
 		
   
-  //q = $('#search').val();
-  //console.log(q);  
+  q = $('#search').val();
+  console.log(q);  
   requestUserUploadsPlaylistId();
  
-//});
+});
   //$('#login-link').hover(function(){
   //var logout = function(){
 //document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/";
@@ -41,7 +41,7 @@ function requestUserUploadsPlaylistId() {
     
     console.log(response);
     for (i in response.result.items){
-    q=child;   
+     
     var re =new RegExp(q, "gi")
 
     playlistId = response.result.items[i].snippet.title;
