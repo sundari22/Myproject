@@ -37,7 +37,8 @@ function loadAPIClientInterfaces(response) {
   //gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
   //gapi.client.load('youtube', 'v3', function() {
     //handleAPILoaded();
-   //$('.content2').append('<iframe width="460" height="315" src="http://www.youtube.com/embed/4D5rvmw1qUU" frameborder="0" align=center allowfullscreen></iframe>'); 
+   gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
+   $('.content2').append('<iframe width="460" height="315" src="http://www.youtube.com/embed/4D5rvmw1qUU" frameborder="0" align=center allowfullscreen></iframe>'); 
 }
   
   
