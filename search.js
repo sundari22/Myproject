@@ -1,5 +1,6 @@
 
 googleApiClientReady = function() {
+	console.log("beforeloaded");
 gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
 console.log("loaded");
  }
