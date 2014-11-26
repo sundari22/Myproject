@@ -1,26 +1,3 @@
-var OAUTH2_CLIENT_ID = '1030024881954-nto730v1nmhjdouscr90ipnj2dghl4bt.apps.googleusercontent.com';
-
-var OAUTH2_SCOPES = [
-  'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/youtube'
-];
-
-function loadAPIClientInterfaces(response) {
-  console.log(response);
-  //gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
-  //gapi.client.load('youtube', 'v3', function() {
-    //handleAPILoaded();
-    var request = gapi.client.youtube.playlists.list({
-    mine: true,
-    part: 'id, snippet, contentDetails'
-  });
- 
-  request.execute(function(response) {
-    
-    console.log(response);
-  //});
-}
-  } 
-
 function oauth2_login() {
         $.oauth2({
         auth_url: 'https://accounts.google.com/o/oauth2/auth',           // required
@@ -55,7 +32,14 @@ googleApiClientReady = function() {
 });
 }
 
-
+function loadAPIClientInterfaces(response) {
+  console.log(response);
+  //gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
+  //gapi.client.load('youtube', 'v3', function() {
+    //handleAPILoaded();
+    
+}
+  
   
   
   
