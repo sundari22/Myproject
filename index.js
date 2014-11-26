@@ -44,8 +44,9 @@ googleApiClientReady = function() {
   
   function loadAPIClientInterfaces(response) {
   console.log(response);
-  gapi.client.load('youtube', 'v3', function() {
+  //gapi.client.load('youtube', 'v3').then(function() { console.log('loaded.'); });
+  //gapi.client.load('youtube', 'v3', function() {
     handleAPILoaded();
-  });
+  //});
 }
    
