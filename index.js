@@ -21,18 +21,8 @@ function oauth2_login() {
         //$("#logs").append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>");
         $('#login-link').hide();
         //$('#login-link').append("<p class='success'><b>response: </b>"+JSON.stringify(response)+"</p>");
-        gapi.client.load('youtube', 'v3', function() {
-        var request = gapi.client.youtube.playlists.list({
-            mine: true,
-            part: 'id, snippet, contentDetails'
-        });
- 
-        request.execute(function(response) {
-    
-        console.log(response);
-        });
-        }
-        //loadAPIClientInterfaces(response);
+  
+        loadAPIClientInterfaces(response);
         }, function(error, response){
         // do something with error object
         //$("#logs").append("<p class='error'><b>error: </b>"+JSON.stringify(error)+"</p>");
