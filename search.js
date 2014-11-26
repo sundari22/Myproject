@@ -1,6 +1,7 @@
 
 googleApiClientReady = function() {
 gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
+console.log("loaded");
  }
 
  // Called automatically when YouTube API interface is loaded (see line 9).
