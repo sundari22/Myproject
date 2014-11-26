@@ -6,6 +6,7 @@ console.log("loaded");
 
  // Called automatically when YouTube API interface is loaded (see line 9).
 function onYouTubeApiLoad() { 
+	console.log("x");
    // This API key is intended for use only in this lesson. 
    // See http://goo.gl/PdPA1 to get a key for your own applications.
    gapi.client.setApiKey('iedaZ21p_3vExrcUEGSHX-74'); 
