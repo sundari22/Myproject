@@ -1,8 +1,6 @@
 
 googleApiClientReady = function() {
-	console.log("beforeloaded");
-gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
-console.log("loaded");
+	
  }
 
  // Called automatically when YouTube API interface is loaded (see line 9).
@@ -12,7 +10,7 @@ function onYouTubeApiLoad() {
    // See http://goo.gl/PdPA1 to get a key for your own applications.
    gapi.client.setApiKey('iedaZ21p_3vExrcUEGSHX-74'); 
 
-$('#search-button').attr('disabled', false);
+
 }
 
 var q, playlistId, k, nextPageToken, prevPageToken;
@@ -38,6 +36,7 @@ $(document).on('pageinit',function() {
 
   
 function requestUserUploadsPlaylistId() {
+	gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
   // See https://developers.google.com/youtube/v3/docs/channels/list
     var request = gapi.client.youtube.search.list({
     q: q,
