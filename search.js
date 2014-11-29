@@ -61,7 +61,7 @@ var videoarray = [];
       videoarray.push(entry); 
       }); 
       if (videoarray.length != 0 ){
-      $('.content2').append('<iframe width="460" height="315" src="//www.youtube.com/embed/videoarray[1].video_id?playlist='+ videoarray[0].video_id+', '+videoarray[1].video_id +','+ videoarray[2].video_id +', '+ videoarray[3].video_id +','+ videoarray[4].video_id +', '+ videoarray[5].video_id +', '+ videoarray[6].video_id +','+ videoarray[7].video_id +','+ videoarray[8].video_id +','+ videoarray[9].video_id +'&showinfo=1" frameborder="0" align="center" allowfullscreen></iframe>');
+      $('.content2').append('<iframe width="460" height="315" src="https://www.youtube.com/embed/videoarray[1].video_id?playlist='+ videoarray[0].video_id+', '+videoarray[1].video_id +','+ videoarray[2].video_id +', '+ videoarray[3].video_id +','+ videoarray[4].video_id +', '+ videoarray[5].video_id +', '+ videoarray[6].video_id +','+ videoarray[7].video_id +','+ videoarray[8].video_id +','+ videoarray[9].video_id +'&showinfo=1" frameborder="0" align="center" allowfullscreen></iframe>');
       }  
       } else {
 
