@@ -1,5 +1,4 @@
-var playlistId;
-var videoarray = [];
+
 googleApiClientReady = function() {
 	
  }
@@ -43,7 +42,8 @@ function requestUserUploadsPlaylistId() {
   });
     
   request.execute(function(response) {
-    
+    var playlistId;
+var videoarray = [];
     
     if (videoarray.length > 0 ){
       
